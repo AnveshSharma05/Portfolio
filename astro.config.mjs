@@ -1,10 +1,10 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 
-const BASE = '/portfolio';
+const BASE = '/Portfolio';
 
 // Lets you write image and link paths in project .md files as /images/...
-// and automatically adds /portfolio in front when the site is built.
+// and automatically adds /Portfolio in front when the site is built.
 function prefixBasePaths() {
   const fix = (/** @type {any} */ value) =>
     typeof value === 'string' && value.startsWith('/') && !value.startsWith('//') && !value.startsWith(BASE + '/')
@@ -22,8 +22,8 @@ function prefixBasePaths() {
 
 export default defineConfig({
   site: 'https://anveshsharma05.github.io',
-  // The repository is named "portfolio", so the site lives at /portfolio.
-  // If you ever rename the repository to AnveshSharma05.github.io, change this to '/'.
+  // The repository is named "Portfolio", so the site lives at /Portfolio (GitHub addresses are case-sensitive).
+  // If you ever rename the repository to AnveshSharma05.github.io, change BASE to '/'.
   base: BASE,
   markdown: {
     rehypePlugins: [prefixBasePaths],

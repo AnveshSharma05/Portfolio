@@ -17,7 +17,7 @@ Built with Astro and published free with GitHub Pages. Every time you save (comm
 
 1. On GitHub, open `src/content/projects/`.
 2. Open any project file, copy everything, then go back and click **Add file → Create new file**.
-3. Name it something like `heart-valve.md`. The name becomes the page address (`/portfolio/projects/heart-valve/`).
+3. Name it something like `heart-valve.md`. The name becomes the page address (`/Portfolio/projects/heart-valve/`).
 4. Paste and edit the top section:
 
    ```yaml
@@ -60,11 +60,11 @@ npm install
 npm run dev
 ```
 
-Open http://localhost:4321/portfolio/. Changes show up as soon as you save.
+Open http://localhost:4321/Portfolio/. Changes show up as soon as you save.
 
-## Paths and the /portfolio address
+## Paths and the /Portfolio address
 
-The site lives at https://anveshsharma05.github.io/portfolio/. Keep writing image and link paths as `/images/...` in project files; `/portfolio` is added automatically when the site is built.
+The site lives at https://anveshsharma05.github.io/Portfolio/. Keep writing image and link paths as `/images/...` in project files; `/Portfolio` is added automatically when the site is built.
 
 ## First-time setup
 

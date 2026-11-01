@@ -1,6 +1,6 @@
-// Adds the site's base path (/portfolio) to links and image paths.
+// Adds the site's base path (/Portfolio) to links and image paths.
 // Write paths as if the site lived at the root, e.g. url('/images/me.jpg'),
-// and this turns them into '/portfolio/images/me.jpg'.
+// and this turns them into '/Portfolio/images/me.jpg'.
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
 export function url(path: string): string {
