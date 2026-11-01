@@ -1,0 +1,117 @@
+/* =========================================================
+   SITE SETTINGS — change these to restyle the whole site
+   ========================================================= */
+:root {
+  /* Colors */
+  --black: #08070b;          /* page background (black with a hint of purple) */
+  --surface: #13111a;        /* slightly raised areas */
+  --line: #2b2636;           /* thin borders and the graph-paper grid */
+  --gold: #d9b45b;           /* main accent: headings, links, frames */
+  --gold-deep: #a8832f;      /* darker gold for borders and underlines */
+  --purple: #8a63d2;         /* secondary accent: hovers, focus, highlights */
+  --purple-glow: #3a1f6b;    /* soft purple glow behind "Proudest projects" */
+  --text: #eee8da;           /* main text (warm off-white) */
+  --muted: #a39daf;          /* secondary text */
+
+  /* Fonts */
+  --font-display: 'Bodoni Moda', 'Didot', 'Bodoni 72', Georgia, serif;
+  --font-body: 'Hanken Grotesk', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  /* Layout */
+  --page-width: 1180px;
+  --gutter: clamp(1.25rem, 4vw, 3rem);
+  --radius: 4px;
+}
+
+/* ========================================================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--black);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: var(--gold);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+
+a:hover {
+  color: var(--text);
+  text-decoration-color: var(--purple);
+}
+
+:focus-visible {
+  outline: 2px solid var(--purple);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+p {
+  margin: 0 0 1em;
+}
+
+.wrap {
+  width: 100%;
+  max-width: var(--page-width);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 0.5rem;
+  background: var(--gold);
+  color: var(--black);
+  padding: 0.5rem 1rem;
+  z-index: 10;
+}
+
+.skip-link:focus {
+  left: 0.5rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}

@@ -1,0 +1,262 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+
+const all = (await getCollection('projects')).sort((a, b) => a.data.order - b.data.order);
+const projects = all.filter((p) => !p.data.proudest);
+const proudest = all.filter((p) => p.data.proudest);
+---
+
+<Base>
+  <!-- Intro -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="intro">
+        <h1>Hello, I'm Anvesh.</h1>
+        <p class="lede">
+          I'm a biomedical engineer, passionate about learning new skills and designing medical devices.
+        </p>
+        <p class="pointer">
+          <span class="underlined">My proudest projects are at the bottom of the page.</span>
+          <a href="#proudest">Skip to them</a>
+        </p>
+      </div>
+
+      <figure class="portrait">
+        <div class="sheet">
+          <span class="corner tl" aria-hidden="true"></span>
+          <span class="corner tr" aria-hidden="true"></span>
+          <span class="corner bl" aria-hidden="true"></span>
+          <span class="corner br" aria-hidden="true"></span>
+          <img src="/images/portrait.svg" alt="Portrait of Anvesh Sharma" width="600" height="750" />
+        </div>
+        <div class="dimension" aria-hidden="true"><span></span></div>
+        <figcaption>Anvesh Sharma, Boston University</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- All projects -->
+  <section class="section" id="projects" aria-labelledby="projects-title">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="projects-title">Projects</h2>
+        <p>Hardware and design work from classes, labs and side projects.</p>
+      </div>
+      <div class="grid">
+        {projects.map((p) => (
+          <ProjectCard id={p.id} title={p.data.title} category={p.data.category} image={p.data.image} imageAlt={p.data.imageAlt} />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Proudest projects -->
+  <section class="section proudest" id="proudest" aria-labelledby="proudest-title">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="proudest-title">Proudest projects</h2>
+        <p>The work I'm most proud of, and the best place to start.</p>
+      </div>
+      <div class="grid">
+        {proudest.map((p) => (
+          <ProjectCard id={p.id} title={p.data.title} category={p.data.category} image={p.data.image} imageAlt={p.data.imageAlt} featured />
+        ))}
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  /* ---------- Intro ---------- */
+  .hero {
+    position: relative;
+    padding-block: clamp(3.5rem, 9vw, 7rem) clamp(3.5rem, 8vw, 6rem);
+    border-bottom: 1px solid var(--line);
+    /* graph-paper grid, like the notebook this site was sketched in */
+    background-image:
+      linear-gradient(to right, color-mix(in srgb, var(--line) 55%, transparent) 1px, transparent 1px),
+      linear-gradient(to bottom, color-mix(in srgb, var(--line) 55%, transparent) 1px, transparent 1px);
+    background-size: 28px 28px;
+    background-position: center top;
+  }
+  .hero::after {
+    /* fade the grid out toward the edges */
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 70% 80% at 40% 45%, transparent 30%, var(--black) 85%);
+    pointer-events: none;
+  }
+  .hero-grid {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 1.35fr 1fr;
+    gap: clamp(2rem, 6vw, 5rem);
+    align-items: center;
+  }
+  h1 {
+    font-size: clamp(3.2rem, 9vw, 7.25rem);
+    font-weight: 400;
+    color: var(--gold);
+    line-height: 0.98;
+    letter-spacing: -0.025em;
+    margin-bottom: 1.75rem;
+    animation: rise 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  }
+  .lede {
+    font-family: var(--font-display);
+    font-size: clamp(1.35rem, 2.4vw, 1.8rem);
+    line-height: 1.4;
+    max-width: 30ch;
+    margin-bottom: 2.25rem;
+    animation: rise 0.9s 0.15s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  }
+  .pointer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.5rem 1.25rem;
+    color: var(--muted);
+    animation: rise 0.9s 0.3s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  }
+  .underlined {
+    color: var(--text);
+    background-image: linear-gradient(var(--gold), var(--gold));
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+    background-size: 100% 1px;
+    padding-bottom: 0.2em;
+    animation: draw 1.1s 0.7s cubic-bezier(0.6, 0, 0.2, 1) both;
+  }
+
+  /* Portrait framed like a drawing sheet */
+  .portrait {
+    margin: 0;
+    justify-self: end;
+    width: min(100%, 400px);
+  }
+  .sheet {
+    position: relative;
+    padding: 14px;
+    border: 1px solid var(--line);
+    background: var(--black);
+  }
+  .sheet img {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    border-radius: 2px;
+  }
+  .corner {
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    border-color: var(--gold);
+    border-style: solid;
+    border-width: 0;
+  }
+  .tl { top: -1px; left: -1px; border-top-width: 2px; border-left-width: 2px; }
+  .tr { top: -1px; right: -1px; border-top-width: 2px; border-right-width: 2px; }
+  .bl { bottom: -1px; left: -1px; border-bottom-width: 2px; border-left-width: 2px; }
+  .br { bottom: -1px; right: -1px; border-bottom-width: 2px; border-right-width: 2px; }
+  .dimension {
+    position: relative;
+    height: 14px;
+    margin-top: 12px;
+    border-inline: 1px solid var(--gold-deep);
+  }
+  .dimension span {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    height: 1px;
+    background: var(--gold-deep);
+  }
+  figcaption {
+    margin-top: 0.6rem;
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--muted);
+    font-style: italic;
+    font-family: var(--font-display);
+  }
+
+  @keyframes rise {
+    from { opacity: 0; transform: translateY(14px); }
+    to { opacity: 1; transform: none; }
+  }
+  @keyframes draw {
+    from { background-size: 0% 1px; }
+    to { background-size: 100% 1px; }
+  }
+
+  /* ---------- Project sections ---------- */
+  .section {
+    padding-block: clamp(4rem, 9vw, 6.5rem);
+  }
+  .section-head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 0.5rem 2rem;
+    margin-bottom: clamp(2rem, 5vw, 3rem);
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--line);
+  }
+  .section-head h2 {
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+  }
+  .section-head p {
+    margin: 0;
+    color: var(--muted);
+    max-width: 40ch;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 0.75rem;
+    column-gap: clamp(1.25rem, 3vw, 2.25rem);
+  }
+
+  .grid > :global(.card) {
+    margin-bottom: clamp(1.25rem, 3vw, 2.25rem);
+  }
+  .proudest {
+    position: relative;
+    background:
+      radial-gradient(ellipse 60% 55% at 50% 0%, color-mix(in srgb, var(--purple-glow) 85%, transparent), transparent 70%),
+      linear-gradient(var(--black), color-mix(in srgb, var(--purple-glow) 25%, var(--black)));
+    border-top: 1px solid var(--gold-deep);
+  }
+  .proudest .section-head h2 {
+    color: var(--gold);
+  }
+  .proudest .section-head {
+    border-bottom-color: color-mix(in srgb, var(--gold-deep) 50%, transparent);
+  }
+
+  @media (max-width: 900px) {
+    .grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (max-width: 720px) {
+    .hero-grid {
+      grid-template-columns: 1fr;
+    }
+    .portrait {
+      justify-self: start;
+      width: min(100%, 320px);
+    }
+  }
+  @media (max-width: 560px) {
+    .grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

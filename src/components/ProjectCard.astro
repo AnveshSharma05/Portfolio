@@ -1,0 +1,88 @@
+---
+interface Props {
+  id: string;
+  title: string;
+  category: string;
+  image: string;
+  imageAlt?: string;
+  featured?: boolean;
+}
+const { id, title, category, image, imageAlt = '', featured = false } = Astro.props;
+---
+
+<a class:list={['card', { featured }]} href={`/projects/${id}/`}>
+  <span class="head">
+    <span class="title">{title}</span>
+    <span class="cat">{category}</span>
+  </span>
+  <span class="frame">
+    <img src={image} alt={imageAlt} loading="lazy" width="800" height="600" />
+  </span>
+</a>
+
+<style>
+  .card {
+    display: grid;
+    /* subgrid keeps images lined up even when a title wraps to two lines */
+    grid-template-rows: subgrid;
+    grid-row: span 2;
+    gap: 0.75rem;
+    text-decoration: none;
+    color: var(--text);
+  }
+  .head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+  .title {
+    font-family: var(--font-display);
+    font-size: 1.45rem;
+    line-height: 1.15;
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    text-underline-offset: 0.18em;
+    text-decoration-thickness: 1px;
+    transition: text-decoration-color 0.2s;
+  }
+  .cat {
+    font-size: 0.85rem;
+    color: var(--muted);
+    white-space: nowrap;
+  }
+  .frame {
+    display: block;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--surface);
+    transition: border-color 0.2s;
+  }
+  .frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .card:hover .title,
+  .card:focus-visible .title {
+    text-decoration-color: var(--purple);
+  }
+  .card:hover .frame,
+  .card:focus-visible .frame {
+    border-color: var(--purple);
+  }
+
+  /* Proudest projects get a gold frame */
+  .featured .frame {
+    border-color: var(--gold-deep);
+    box-shadow: 0 0 0 4px var(--black), 0 0 0 5px color-mix(in srgb, var(--gold-deep) 45%, transparent);
+  }
+  .featured .title {
+    color: var(--gold);
+  }
+  .featured:hover .frame {
+    border-color: var(--gold);
+  }
+</style>

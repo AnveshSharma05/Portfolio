@@ -1,0 +1,62 @@
+---
+// Replace these with your real links
+const email = 'you@example.com';
+const linkedin = 'https://www.linkedin.com/in/your-profile';
+const year = new Date().getFullYear();
+---
+
+<footer class="site-footer" id="contact">
+  <div class="wrap inner">
+    <div>
+      <h2>Let's build something.</h2>
+      <p>I'm open to internships, research roles and collaborations in medical device design.</p>
+    </div>
+    <ul class="links">
+      <li><a href={`mailto:${email}`}>{email}</a></li>
+      <li><a href={linkedin}>LinkedIn</a></li>
+      <li><a href="/resume.pdf">Resume (PDF)</a></li>
+    </ul>
+  </div>
+  <div class="wrap fine">© {year} Anvesh Sharma</div>
+</footer>
+
+<style>
+  .site-footer {
+    border-top: 1px solid var(--line);
+    margin-top: 0;
+    padding-block: clamp(3rem, 8vw, 5rem) 2rem;
+  }
+  .inner {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 2rem;
+    align-items: end;
+  }
+  h2 {
+    font-size: clamp(2rem, 5vw, 3.25rem);
+    color: var(--gold);
+    margin-bottom: 0.75rem;
+  }
+  p {
+    color: var(--muted);
+    max-width: 44ch;
+  }
+  .links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 0.5rem;
+    justify-items: start;
+  }
+  .fine {
+    margin-top: 3rem;
+    font-size: 0.85rem;
+    color: var(--muted);
+  }
+  @media (max-width: 720px) {
+    .inner {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
