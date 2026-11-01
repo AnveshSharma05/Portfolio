@@ -1,17 +1,17 @@
 ---
-title: Hardware project
-category: Hardware
-summary: One sentence that explains what this project is and why it matters.
-image: /images/projects/hardware-project.svg
-imageAlt: Placeholder image for Hardware project
+title: Yubikey Case
+category: Hardware Design
 proudest: false
 order: 1
-role: Your role, e.g. Lead mechanical designer
-team: Team size or teammates
-timeline: Fall 2026
-tools: SolidWorks, MATLAB, 3D printing
+image: /images/projects/yubikey-screenshot.png
+imageAlt: Yubikey Cover
+summary: "A fix to prevent the hardware security key, Yubikey, from snapping and
+  breaking easily. "
+role: Creator
+team: Team of 1
+timeline: Created in June 2023
+tools: SolidWorks, Fusion 360, 3D Printing
 ---
-
 ## Overview
 
 Placeholder text. Describe the project in two or three sentences: what you built, who it was for and what it does.
