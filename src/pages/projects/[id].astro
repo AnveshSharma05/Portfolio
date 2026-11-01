@@ -1,4 +1,5 @@
 ---
+import { url } from '../../lib/url';
 import { getCollection, render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 
@@ -25,7 +26,7 @@ const facts = [
 
 <Base title={d.title} description={d.summary}>
   <article class="wrap project">
-    <a class="back" href={d.proudest ? '/#proudest' : '/#projects'}>Back to all projects</a>
+    <a class="back" href={url(d.proudest ? '/#proudest' : '/#projects')}>Back to all projects</a>
 
     <header class="head">
       <p class="cat">{d.proudest ? `${d.category}, one of my proudest projects` : d.category}</p>
@@ -45,7 +46,7 @@ const facts = [
     )}
 
     <figure class="cover">
-      <img src={d.image} alt={d.imageAlt} width="1600" height="1000" />
+      <img src={url(d.image)} alt={d.imageAlt} width="1600" height="1000" />
     </figure>
 
     <div class="prose">
@@ -54,7 +55,7 @@ const facts = [
 
     <nav class="next" aria-label="Next project">
       <span>Next project</span>
-      <a href={`/projects/${next.id}/`}>{next.data.title}</a>
+      <a href={url(`/projects/${next.id}/`)}>{next.data.title}</a>
     </nav>
   </article>
 </Base>
