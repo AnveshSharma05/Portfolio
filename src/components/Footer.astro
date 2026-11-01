@@ -1,24 +1,23 @@
 ---
 import { url } from '../lib/url';
-// Replace these with your real links
-const email = 'you@example.com';
-const linkedin = 'https://www.linkedin.com/in/your-profile';
+import { site } from '../lib/site';
+const { email, linkedin, resume } = site;
 const year = new Date().getFullYear();
 ---
 
 <footer class="site-footer" id="contact">
   <div class="wrap inner">
     <div>
-      <h2>Let's build something.</h2>
-      <p>I'm open to internships, research roles and collaborations in medical device design.</p>
+      <h2>{site.contact_heading}</h2>
+      {site.contact_text && <p>{site.contact_text}</p>}
     </div>
     <ul class="links">
-      <li><a href={`mailto:${email}`}>{email}</a></li>
-      <li><a href={linkedin}>LinkedIn</a></li>
-      <li><a href={url('/resume.pdf')}>Resume (PDF)</a></li>
+      {email && <li><a href={`mailto:${email}`}>{email}</a></li>}
+      {linkedin && <li><a href={linkedin}>LinkedIn</a></li>}
+      {resume && <li><a href={url(resume)}>Resume (PDF)</a></li>}
     </ul>
   </div>
-  <div class="wrap fine">© {year} Anvesh Sharma</div>
+  <div class="wrap fine">© {year} {site.name}</div>
 </footer>
 
 <style>

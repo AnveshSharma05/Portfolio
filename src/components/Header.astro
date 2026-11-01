@@ -1,16 +1,17 @@
 ---
 import { url } from '../lib/url';
+import { site } from '../lib/site';
 const links = [
   { href: '/#projects', label: 'Projects' },
   { href: '/#proudest', label: 'Proudest' },
-  { href: '/resume.pdf', label: 'Resume' },
+  ...(site.resume ? [{ href: site.resume, label: 'Resume' }] : []),
   { href: '/#contact', label: 'Contact' },
 ];
 ---
 
 <header class="site-header">
   <div class="wrap bar">
-    <a class="mark" href={url('/')}>Anvesh Sharma</a>
+    <a class="mark" href={url('/')}>{site.name}</a>
     <nav aria-label="Main">
       <ul>
         {links.map((l) => <li><a href={url(l.href)}>{l.label}</a></li>)}

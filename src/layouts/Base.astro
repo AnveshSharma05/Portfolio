@@ -1,5 +1,6 @@
 ---
 import { url } from '../lib/url';
+import { site, safeColor } from '../lib/site';
 import '@fontsource/bodoni-moda/400.css';
 import '@fontsource/bodoni-moda/500.css';
 import '@fontsource/bodoni-moda/400-italic.css';
@@ -15,11 +16,10 @@ interface Props {
   description?: string;
 }
 
-const {
-  title = 'Anvesh Sharma',
-  description = 'Biomedical engineer designing medical devices. Selected projects and design work.',
-} = Astro.props;
-const fullTitle = title === 'Anvesh Sharma' ? title : `${title} | Anvesh Sharma`;
+const { title = site.name, description = site.seo_description } = Astro.props;
+const fullTitle = title === site.name ? title : `${title} | ${site.name}`;
+const bg = safeColor(site.color_background, '#08070b');
+const theme = `html:root{--gold:${safeColor(site.color_gold, '#d9b45b')};--purple:${safeColor(site.color_purple, '#8a63d2')};--black:${bg};}`;
 ---
 
 <!doctype html>
@@ -29,7 +29,8 @@ const fullTitle = title === 'Anvesh Sharma' ? title : `${title} | Anvesh Sharma`
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{fullTitle}</title>
     <meta name="description" content={description} />
-    <meta name="theme-color" content="#08070b" />
+    <meta name="theme-color" content={bg} />
+    <style set:html={theme}></style>
     <link rel="icon" href={url('/favicon.svg')} type="image/svg+xml" />
   </head>
   <body>

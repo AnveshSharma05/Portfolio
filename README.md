@@ -2,15 +2,24 @@
 
 Built with Astro and published free with GitHub Pages. Every time you save (commit) a change on GitHub, the site rebuilds and goes live in about a minute.
 
+## Editing with Pages CMS (easiest)
+
+1. Go to https://app.pagescms.org and sign in with GitHub.
+2. Open the **Portfolio** repository.
+3. Use **Projects** to add or edit projects, and **Home page & settings** for the intro text, photo, contact links, resume and colors.
+4. Click **Save**. The live site updates about a minute later. You can follow progress in the repository's **Actions** tab.
+
+The editor is set up by `.pages.yml` in this repository.
+
 ## Where things live
 
 | What you want to change | File |
 | --- | --- |
 | A project's text, title, category or image | `src/content/projects/<project>.md` |
-| Project images, your photo, resume | `public/images/...`, `public/resume.pdf` |
+| Project images, your photo | `public/images/...` |
+| Resume and other files | `public/files/...` |
+| Home page text, contact links, colors | `src/data/site.json` |
 | Colors, fonts, page width | `src/styles/global.css` (settings at the top) |
-| Intro text on the home page | `src/pages/index.astro` |
-| Email and LinkedIn links | `src/components/Footer.astro` |
 | Menu links | `src/components/Header.astro` |
 
 ## Add a new project
@@ -43,13 +52,11 @@ Built with Astro and published free with GitHub Pages. Every time you save (comm
 
 Open `public/images/projects/`, click **Add file → Upload files**, drop your images in and commit. Then set the `image:` line in the project file to the new file name, for example `/images/projects/heart-valve.jpg`. Images around 1600px wide in JPG are a good size.
 
-Replace your photo by uploading `public/images/portrait.jpg` and changing `/images/portrait.svg` to `/images/portrait.jpg` in `src/pages/index.astro`.
-
-Replace your resume by uploading your PDF as `public/resume.pdf`, keeping that exact name.
+Your photo and resume are set in **Home page & settings** in Pages CMS (or in `src/data/site.json`).
 
 ## Change colors or fonts
 
-Open `src/styles/global.css`. The labeled settings at the top control the whole site, for example `--gold`, `--purple` and `--black`.
+The gold, purple and background colors can be changed in **Home page & settings** in Pages CMS. Fonts, spacing and the remaining settings are at the top of `src/styles/global.css`.
 
 ## Preview on your own computer (optional)
 

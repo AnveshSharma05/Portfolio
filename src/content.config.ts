@@ -3,21 +3,29 @@ import { glob } from 'astro/loaders';
 import { z } from 'astro/zod';
 
 // Every file in src/content/projects becomes a project page.
-// These are the fields each project file can have at the top.
+// The schema is forgiving on purpose: if a field is left empty in the editor,
+// the site still builds and falls back to a sensible default.
+const text = (fallback: string) =>
+  z.string().nullish().transform((v) => (v && v.trim() ? v : fallback));
+const optionalText = z
+  .string()
+  .nullish()
+  .transform((v) => (v && v.trim() ? v : undefined));
+
 const projects = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/projects' }),
   schema: z.object({
-    title: z.string(),
-    category: z.string(),            // e.g. Hardware, Design, Software
-    summary: z.string(),             // one sentence shown on the project page
-    image: z.string(),               // path inside /public, e.g. /images/projects/lymphsense.jpg
-    imageAlt: z.string().default(''),
-    proudest: z.boolean().default(false), // true = shows in "Proudest projects" at the bottom
-    order: z.number().default(100),  // lower numbers appear first
-    role: z.string().optional(),
-    team: z.string().optional(),
-    timeline: z.string().optional(),
-    tools: z.string().optional(),
+    title: text('Untitled project'),
+    category: text('Project'),
+    summary: text(''),
+    image: text('/images/projects/untitled-project.svg'),
+    imageAlt: text(''),
+    proudest: z.boolean().nullish().transform((v) => v ?? false),
+    order: z.coerce.number().nullish().transform((v) => (typeof v === 'number' && !Number.isNaN(v) ? v : 100)),
+    role: optionalText,
+    team: optionalText,
+    timeline: optionalText,
+    tools: optionalText,
   }),
 });
 

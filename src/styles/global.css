@@ -3,13 +3,15 @@
    ========================================================= */
 :root {
   /* Colors */
+  /* The three main colors can also be changed in Pages CMS (Home page & settings),
+     which overrides the values here. The other colors are mixed from them. */
   --black: #08070b;          /* page background (black with a hint of purple) */
-  --surface: #13111a;        /* slightly raised areas */
-  --line: #2b2636;           /* thin borders and the graph-paper grid */
   --gold: #d9b45b;           /* main accent: headings, links, frames */
-  --gold-deep: #a8832f;      /* darker gold for borders and underlines */
   --purple: #8a63d2;         /* secondary accent: hovers, focus, highlights */
-  --purple-glow: #3a1f6b;    /* soft purple glow behind "Proudest projects" */
+  --surface: color-mix(in srgb, var(--black) 95%, white);             /* slightly raised areas */
+  --line: color-mix(in srgb, var(--black) 80%, #b8a8d8);              /* thin borders and graph-paper grid */
+  --gold-deep: color-mix(in srgb, var(--gold) 75%, black);            /* darker gold for borders */
+  --purple-glow: color-mix(in srgb, var(--purple) 42%, var(--black)); /* glow behind Proudest projects */
   --text: #eee8da;           /* main text (warm off-white) */
   --muted: #a39daf;          /* secondary text */
 

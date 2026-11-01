@@ -1,5 +1,6 @@
 ---
 import { url } from '../lib/url';
+import { site } from '../lib/site';
 import { getCollection } from 'astro:content';
 import Base from '../layouts/Base.astro';
 import ProjectCard from '../components/ProjectCard.astro';
@@ -14,13 +15,11 @@ const proudest = all.filter((p) => p.data.proudest);
   <section class="hero">
     <div class="wrap hero-grid">
       <div class="intro">
-        <h1>Hello, I'm Anvesh.</h1>
-        <p class="lede">
-          I'm a biomedical engineer, passionate about learning new skills and designing medical devices.
-        </p>
+        <h1>{site.intro_heading}</h1>
+        {site.intro_text && <p class="lede">{site.intro_text}</p>}
         <p class="pointer">
-          <span class="underlined">My proudest projects are at the bottom of the page.</span>
-          <a href="#proudest">Skip to them</a>
+          {site.pointer_text && <span class="underlined">{site.pointer_text}</span>}
+          <a href="#proudest">{site.pointer_link}</a>
         </p>
       </div>
 
@@ -30,10 +29,10 @@ const proudest = all.filter((p) => p.data.proudest);
           <span class="corner tr" aria-hidden="true"></span>
           <span class="corner bl" aria-hidden="true"></span>
           <span class="corner br" aria-hidden="true"></span>
-          <img src={url('/images/portrait.svg')} alt="Portrait of Anvesh Sharma" width="600" height="750" />
+          <img src={url(site.photo)} alt={`Portrait of ${site.name}`} width="600" height="750" />
         </div>
         <div class="dimension" aria-hidden="true"><span></span></div>
-        <figcaption>Anvesh Sharma, Boston University</figcaption>
+        {site.photo_caption && <figcaption>{site.photo_caption}</figcaption>}
       </figure>
     </div>
   </section>
@@ -42,8 +41,8 @@ const proudest = all.filter((p) => p.data.proudest);
   <section class="section" id="projects" aria-labelledby="projects-title">
     <div class="wrap">
       <div class="section-head">
-        <h2 id="projects-title">Projects</h2>
-        <p>Hardware and design work from classes, labs and side projects.</p>
+        <h2 id="projects-title">{site.projects_heading}</h2>
+        {site.projects_description && <p>{site.projects_description}</p>}
       </div>
       <div class="grid">
         {projects.map((p) => (
@@ -57,8 +56,8 @@ const proudest = all.filter((p) => p.data.proudest);
   <section class="section proudest" id="proudest" aria-labelledby="proudest-title">
     <div class="wrap">
       <div class="section-head">
-        <h2 id="proudest-title">Proudest projects</h2>
-        <p>The work I'm most proud of, and the best place to start.</p>
+        <h2 id="proudest-title">{site.proudest_heading}</h2>
+        {site.proudest_description && <p>{site.proudest_description}</p>}
       </div>
       <div class="grid">
         {proudest.map((p) => (
