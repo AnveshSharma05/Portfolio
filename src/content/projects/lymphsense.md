@@ -77,7 +77,7 @@ Circuit Design:
 
 Initial Design: This is just the circuit diagram listed on the Instructable with labels on what I understood the circuit to be doing. 
 
-Around this time I took a leave of absence from Boston University to do a co-op at AtriCure. This meant that I was building the circuit at home and did not have access to well maintained soldering stations.   
+Around this time I took a leave of absence from Boston University to do a co-op at AtriCure. This meant that I was building the circuit at home and did not have access to well maintained soldering stations.  
 It also meant that I ended up damaging a few boards as I was soldering them...
 
 ![image.png](/images/projects/image-11.png)
@@ -146,6 +146,10 @@ We were also able to share more about our project in the BMES National Conferenc
 
 ## What I learned
 
-As you read through my 
+As you read through my project it might have been apparent that I was not an expert in designing circuits. However, I am very proud of this project because it showcases how much work I was able to put into a project that I was passionate about. I learned how to bring a project from a concept to a working prototype and the things that guided me where a schedule, great teammates, mentors to ask for help, and a lot of work that we shared with each other to keep ourselves on track even when we had classes and work as well. I was really happy that we were able to bring this project to life and it was a nice surprise that other people agreed and we were able to win a few competitions and share our work with a lot of biomedical engineers.   
+  
+I also did really spend some time working with and learning circuits. This project inspired me to take BE511 - Biomedical Instrumentation where I am now practicing sensor design a lot more rigorously. I learnt about load lines and power curves as well as the important of signal shape in the time domain vs the frequency domain. In this class I have built 4th order Sallen key filters and I am excited to work on a glucose sensor project.   
+  
+The most important things I learnt were building up an idea 
 
 One or two honest takeaways about the engineering or about working on a team.
