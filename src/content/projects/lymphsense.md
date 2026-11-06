@@ -1,24 +1,37 @@
 ---
 title: LymphSense
-category: Research
-summary: One sentence that explains what this project is and why it matters.
-image: /images/projects/lymphsense.svg
-imageAlt: Placeholder image for LymphSense
+category: Design
 proudest: true
 order: 1
-role: Your role, e.g. Lead mechanical designer
-team: Team size or teammates
-timeline: Fall 2026
+image: /images/projects/lymphsense-image.jpg
+imageAlt: "LymphSense device on our created phantom model. "
+summary: "A project to detect fluid buildup under the skin. "
+role: Team Lead
+team: Team of 4
+timeline: Fall 2025 - Spring 2026
 tools: SolidWorks, MATLAB, 3D printing
 ---
-
 ## Overview
 
 Placeholder text. Describe the project in two or three sentences: what you built, who it was for and what it does.
 
+The project is a prototyped solution to detecting early stages of lymphedema before the condition becomes irreversible and difficult to manage. 
+
 ## The problem
 
 What need or question started this project? Who has the problem, and why do the existing solutions fall short?
+
+![image.png](/images/projects/image-1.png)
+
+![image.png](/images/projects/image-2.png)
+
+![image.png](/images/projects/image-3.png)
+
+
+
+![image.png](/images/projects/image-4.png)
+
+The above project was not done by myself but in collaboration with Dylan 
 
 ## My approach
 
