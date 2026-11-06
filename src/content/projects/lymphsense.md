@@ -116,6 +116,8 @@ Walk through how you tackled it: the design requirements, the concepts you consi
 
 What did testing show? Add numbers where you can, such as accuracy, cost, weight or time saved.
 
+Overall we tested the circuit a few ways. 
+
 ## What I learned
 
 One or two honest takeaways about the engineering or about working on a team.
