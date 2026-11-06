@@ -31,7 +31,7 @@ What need or question started this project? Who has the problem, and why do the 
 
 ![image.png](/images/projects/image-4.png)
 
-The above project was not done by myself but in collaboration with Dylan 
+The above project was not done by myself but in collaboration with [Dylann Palmer](https://www.linkedin.com/in/dylannpalmer/),  [Avishi Singh](https://www.linkedin.com/in/avishi-singh/), and [Allison Bechard](https://www.linkedin.com/in/allisonbechard/). 
 
 ## My approach
 
