@@ -118,6 +118,34 @@ What did testing show? Add numbers where you can, such as accuracy, cost, weight
 
 Overall we tested the circuit a few ways. 
 
+![image.png](/images/projects/image-16.png)
+
+![image.png](/images/projects/image-17.png)
+
+![image.png](/images/projects/image-18.png)
+
+![image.png](/images/projects/image-19.png)
+
+To do further testing, we also built a phantom model based on the paper - Chung SH, Kim KG. Design of lymphedema ultrasound phantom with 3D-printed patient-specific subcutaneous anatomy: A-mode analysis approach for early diagnosis. Phys Med. 2018 Nov;55:73-81. doi: 10.1016/j.ejmp.2018.10.019. Epub 2018 Nov 3. PMID: 30471822.
+
+![image.png](/images/projects/image-20.png)
+
+![image.png](/images/projects/image-21.png)
+
+![image.png](/images/projects/image-22.png)
+
+
+
+In the end, we were able to win 1st place for the BU BMES Design-a-Thon and the People's Choice award! We were also able to win best junior team in the Dean's Imagineering Competition. 
+
+![image.png](/images/projects/image-23.png)
+
+We were also able to share more about our project in the BMES National Conference in Orlando. 
+
+![image.png](/images/projects/image-24.png)
+
 ## What I learned
+
+As you read through my 
 
 One or two honest takeaways about the engineering or about working on a team.
