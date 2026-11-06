@@ -63,7 +63,7 @@ I personally used this [Instructable](https://www.instructables.com/Body-Composi
 
 ![image.png](/images/projects/image-8.png)
 
-evanderslice. “Body Composition Using BIA.” Instructables, Autodesk, www.instructables.com/Body-Composition-using-BIA/
+evanderslice. “Body Composition Using BIA.” Instructables, Autodesk, [www.instructables.com/Body-Composition-using-BIA/](http://www.instructables.com/Body-Composition-using-BIA/)
 
 It talked about bioimpedance analysis for the detection of fat and I used their circuit diagram as a base.
 
@@ -77,7 +77,28 @@ Circuit Design:
 
 Initial Design: This is just the circuit diagram listed on the Instructable with labels on what I understood the circuit to be doing. 
 
-We made changes on the initial design. I noticed that in the original circuit they used a large resistor with a resistance far larger than the resistance of the skin, and that they made the assumption that the current going through the system was relatively constant (because whatever measured tissue resistance in the circuit would be much smaller than the large resistor and would thus barely change the current draw). I replaced that resistor and op-amp with a howland current pump instead which was designed to output a constant and known current. We also swapped out the Arduino supplied voltages for our op-amps with power supplies given by 9V batteries for a larger voltage range on our measurand signal. 
+Around this time I took a leave of absence from Boston University to do a co-op at AtriCure. This meant that I was building the circuit at home and did not have access to well maintained soldering stations.   
+It also meant that I ended up damaging a few boards as I was soldering them...
+
+![image.png](/images/projects/image-11.png)
+
+![image.png](/images/projects/image-12.png)
+
+Here I swapped the voltage generator portion of the Instructables circuit with power supplies given by 9V batteries. I believed that this would give us a larger voltage range on our measurand signal. 
+
+![image.png](/images/projects/image-14.png)
+
+![image.png](/images/projects/image-13.png)
+
+Eventually I was able to [design a circuit and share that]([https://docs.google.com/document/d/1CWEsmcMw-NmaX2KsTOl2n537B48ZUN4_8Fv4M-2BTDA/edit?usp=sharing](https://docs.google.com/document/d/1CWEsmcMw-NmaX2KsTOl2n537B48ZUN4_8Fv4M-2BTDA/edit?usp=sharing)) with the team so that they could build that circuit in Boston. 
+
+We presented this in the Dean's Imagineering Competition (a competition that was held a week before the BU Design-a-Thon) and they noted that our data was too noisy. 
+
+![image.png](/images/projects/image-15.png)
+
+Table on the left is the original and table on the right is the circuit after it was redesigned. We redesigned the circuit using a Howland current pump. 
+
+I noticed that in the original circuit they used a large resistor with a resistance far larger than the resistance of the skin, and that they made the assumption that the current going through the system was relatively constant (because whatever measured tissue resistance in the circuit would be much smaller than the large resistor and would thus barely change the current draw). I replaced that resistor and op-amp with a howland current pump instead which was designed to output a constant and known current. 
 
 ![image.png](/images/projects/image-10.png)
 
@@ -85,13 +106,11 @@ We made changes on the initial design. I noticed that in the original circuit th
 
 ![image.png](/images/projects/image-9.png)
 
-This was the final circuit design. 
+With the changes above, this was the final circuit design. 
 
 
 
 Walk through how you tackled it: the design requirements, the concepts you considered, and the one you chose and why. This is a good place for CAD renders or sketches.
-
-![Placeholder for a process image](/images/projects/lymphsense.svg)
 
 ## Results
 
