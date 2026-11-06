@@ -131,11 +131,37 @@ const facts = [
     font-size: 1.35rem;
     margin: 2rem 0 0.6rem;
   }
+  /* Images in the writeup: never wider than the text, never taller than
+     about a screen, centered. Small images stay at their natural size. */
   .prose :global(img) {
-    width: 100%;
-    margin: 2rem 0;
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: min(560px, 80vh);
+    object-fit: contain;
+    margin: 2rem auto;
     border: 1px solid var(--line);
     border-radius: var(--radius);
+  }
+  /* Optional sizes: end an image's description (alt text) with | small, | medium or | full */
+  .prose :global(img[alt$='| small']) {
+    width: 40%;
+  }
+  .prose :global(img[alt$='| medium']) {
+    width: 65%;
+  }
+  .prose :global(img[alt$='| full']) {
+    width: 100%;
+    max-height: none;
+  }
+  @media (max-width: 560px) {
+    .prose :global(img[alt$='| small']) {
+      width: 70%;
+    }
+    .prose :global(img[alt$='| medium']) {
+      width: 100%;
+    }
   }
   .prose :global(ul),
   .prose :global(ol) {
