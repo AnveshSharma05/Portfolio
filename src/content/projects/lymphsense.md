@@ -90,7 +90,7 @@ Here I swapped the voltage generator portion of the Instructables circuit with p
 
 ![image.png](/images/projects/image-13.png)
 
-Eventually I was able to [design a circuit and share that]([https://docs.google.com/document/d/1CWEsmcMw-NmaX2KsTOl2n537B48ZUN4_8Fv4M-2BTDA/edit?usp=sharing](https://docs.google.com/document/d/1CWEsmcMw-NmaX2KsTOl2n537B48ZUN4_8Fv4M-2BTDA/edit?usp=sharing)) with the team so that they could build that circuit in Boston. 
+Eventually I was able to [design a circuit and share that](https://docs.google.com/document/d/1CWEsmcMw-NmaX2KsTOl2n537B48ZUN4_8Fv4M-2BTDA/edit?usp=sharing) with the team so that they could build that circuit in Boston. 
 
 We presented this in the Dean's Imagineering Competition (a competition that was held a week before the BU Design-a-Thon) and they noted that our data was too noisy. 
 
