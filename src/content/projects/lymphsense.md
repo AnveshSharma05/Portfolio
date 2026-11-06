@@ -59,6 +59,34 @@ We got good feedback from the BU BMES chapter and went from ideating to building
 
 My specific role on the team was designing the circuit. 
 
+I personally used this [Instructable](https://www.instructables.com/Body-Composition-using-BIA/#discuss) as guidance. 
+
+![image.png](/images/projects/image-8.png)
+
+evanderslice. “Body Composition Using BIA.” Instructables, Autodesk, www.instructables.com/Body-Composition-using-BIA/
+
+It talked about bioimpedance analysis for the detection of fat and I used their circuit diagram as a base.
+
+Though I had taken classes on signals, used op-amps, and built 1st order high pass and low pass filters, this entire project was my first attempt at building my own circuit. 
+
+Building the circuit was a few months long and involved a lot of testing. Below I have listed my notes on the circuit diagrams and their changes:
+
+Circuit Design: 
+
+![image.png](/images/projects/image-7.png)
+
+Initial Design: This is just the circuit diagram listed on the Instructable with labels on what I understood the circuit to be doing. 
+
+We made changes on the initial design. I noticed that in the original circuit they used a large resistor with a resistance far larger than the resistance of the skin, and that they made the assumption that the current going through the system was relatively constant (because whatever measured tissue resistance in the circuit would be much smaller than the large resistor and would thus barely change the current draw). I replaced that resistor and op-amp with a howland current pump instead which was designed to output a constant and known current. We also swapped out the Arduino supplied voltages for our op-amps with power supplies given by 9V batteries for a larger voltage range on our measurand signal. 
+
+![image.png](/images/projects/image-10.png)
+
+
+
+![image.png](/images/projects/image-9.png)
+
+This was the final circuit design. 
+
 
 
 Walk through how you tackled it: the design requirements, the concepts you considered, and the one you chose and why. This is a good place for CAD renders or sketches.
