@@ -12,7 +12,7 @@ summary: "We designed and validated a nozzle that would provide specific values
 role: Mechanical Team Lead
 team: Team of 4
 timeline: "Sep 2024 - Jan 2025 "
-tools: SolidWorks, MATLAB, 3D printing
+tools: SolidWorks
 ---
 ## Overview
 
