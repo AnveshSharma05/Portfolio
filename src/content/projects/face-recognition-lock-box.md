@@ -1,7 +1,7 @@
 ---
 title: Face Recognition Lock Box
 category: Prototyping
-proudest: true
+proudest: false
 order: 2
 image: /images/projects/facerecognitionlockbox.webp
 imageAlt: "Face recognition box we built using laser cut wood and acrylic. "
