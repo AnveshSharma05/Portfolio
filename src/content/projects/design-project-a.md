@@ -22,15 +22,15 @@ We designed and simulated a nozzle in Solidworks to output a specific thrust val
 
 We first learned about how to increa
 
-![image.png](blob:https:/app.pagescms.org/820aba37-3671-4a29-b80b-0396f631709b)
+![image.png](/images/projects/image-28.png)
+
+![image.png](/images/projects/image-27.png)
 
 
 
 ![image.png](/images/projects/image-26.png)
 
 ![image.png](/images/projects/image-25.png)
-
-![Placeholder for a process image](/images/projects/design-project-a.svg)
 
 ## Results
 
