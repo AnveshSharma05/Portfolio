@@ -13,13 +13,9 @@ tools: SolidWorks, MATLAB, 3D printing
 ---
 ## Overview
 
-Placeholder text. Describe the project in two or three sentences: what you built, who it was for and what it does.
-
 This is a project that showcases my exploration into finding a current medical need and creating a prototyped solution to detecting early stages of lymphedema before the condition becomes irreversible and difficult to manage. 
 
 ## The problem
-
-What need or question started this project? Who has the problem, and why do the existing solutions fall short?
 
 What started the problem:
 
@@ -108,13 +104,7 @@ I noticed that in the original circuit they used a large resistor with a resista
 
 With the changes above, this was the final circuit design. 
 
-
-
-Walk through how you tackled it: the design requirements, the concepts you considered, and the one you chose and why. This is a good place for CAD renders or sketches.
-
 ## Results
-
-What did testing show? Add numbers where you can, such as accuracy, cost, weight or time saved.
 
 Overall we tested the circuit a few ways. 
 
@@ -150,6 +140,3 @@ As you read through my project it might have been apparent that I was not an exp
 
 I also did really spend some time working with and learning circuits. This project inspired me to take BE511 - Biomedical Instrumentation where I am now practicing sensor design a lot more rigorously. I learnt about load lines and power curves as well as the important of signal shape in the time domain vs the frequency domain. In this class I have built 4th order Sallen key filters and I am excited to work on a glucose sensor project.   
 
-The most important things I learnt were building up an idea 
-
-One or two honest takeaways about the engineering or about working on a team.
