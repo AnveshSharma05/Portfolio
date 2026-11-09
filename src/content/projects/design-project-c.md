@@ -1,35 +1,27 @@
 ---
-title: Design project C
-category: Design
-summary: One sentence that explains what this project is and why it matters.
-image: /images/projects/design-project-c.svg
-imageAlt: Placeholder image for Design project C
-proudest: false
+title: "Senior Design: Drone For Aquatic Plant Monitoring"
+category: Robotics, Electrical, Hardware
+proudest: true
 order: 4
-role: Your role, e.g. Lead mechanical designer
-team: Team size or teammates
-timeline: Fall 2026
-tools: SolidWorks, MATLAB, 3D printing
+image: /images/projects/inprogress-1.jpg
+imageAlt: Working on the project this year!
+summary: "We are designing a drone to make Eelgrass (vital plant for ecosystem)
+  monitoring easier. "
+role: Student Engineer
+team: Team of 5
+timeline: Fall 2026 - Current
+tools: SolidWorks
 ---
-
 ## Overview
 
-Placeholder text. Describe the project in two or three sentences: what you built, who it was for and what it does.
+We are currently working to design our project. The 500 dollar budget is very restrictive!
 
-## The problem
+We have previously interviewed our stakeholders, created specifications and requirements, proposed risks and timelines, presented concepts, and have chosen a concept. 
 
-What need or question started this project? Who has the problem, and why do the existing solutions fall short?
+![image.png](/images/projects/image-34.png)
 
-## My approach
+![image.png](/images/projects/image-35.png)
 
-Walk through how you tackled it: the design requirements, the concepts you considered, and the one you chose and why. This is a good place for CAD renders or sketches.
+![image.png](/images/projects/image-36.png)
 
-![Placeholder for a process image](/images/projects/design-project-c.svg)
-
-## Results
-
-What did testing show? Add numbers where you can, such as accuracy, cost, weight or time saved.
-
-## What I learned
-
-One or two honest takeaways about the engineering or about working on a team.
+More to come!
