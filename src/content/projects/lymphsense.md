@@ -17,7 +17,7 @@ This is a project that showcases my exploration into finding a current medical n
 
 ## The problem
 
-What started the problem:
+The LymphSense project started with a different project that was about identifying cancer margins:
 
 ![image.png](/images/projects/image-1.png)
 
