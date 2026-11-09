@@ -16,15 +16,19 @@ tools: SolidWorks
 ---
 ## Overview
 
-Placeholder text. Describe the project in two or three sentences: what you built, who it was for and what it does.
-
-## The problem
-
-What need or question started this project? Who has the problem, and why do the existing solutions fall short?
+We designed and simulated a nozzle in Solidworks to output a specific thrust value when connected to an existing nozzle adapter for the Boston University Rocket Propulsion Group (BURPG).
 
 ## My approach
 
-Walk through how you tackled it: the design requirements, the concepts you considered, and the one you chose and why. This is a good place for CAD renders or sketches.
+We first learned about how to increa
+
+![image.png](blob:https:/app.pagescms.org/820aba37-3671-4a29-b80b-0396f631709b)
+
+
+
+![image.png](/images/projects/image-26.png)
+
+![image.png](/images/projects/image-25.png)
 
 ![Placeholder for a process image](/images/projects/design-project-a.svg)
 
