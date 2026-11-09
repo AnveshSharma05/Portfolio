@@ -17,7 +17,7 @@ tools: Fusion 360, 3d Printing, Raspberry Pi
 
 ## Overview
 
-For a project in class we built a lock box from scratch. The idea was a storage space similar to a locker but one that would open up only when it detected the specific face it was trained on. 
+For a highschool project in class, we built a lock box from scratch. The idea was a storage space similar to a locker but one that would open up only when it detected the specific face it was trained on. 
 
 Please read more about the project and how we built it through this link: 
 
