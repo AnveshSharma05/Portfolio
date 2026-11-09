@@ -4,10 +4,17 @@ import { site } from '../lib/site';
 import { getCollection } from 'astro:content';
 import Base from '../layouts/Base.astro';
 import ProjectCard from '../components/ProjectCard.astro';
+import { sections } from '../lib/sections';
 
 const all = (await getCollection('projects')).sort((a, b) => a.data.order - b.data.order);
-const projects = all.filter((p) => !p.data.proudest);
-const proudest = all.filter((p) => p.data.proudest);
+// Only show sections that have at least one project
+const groups = sections
+  .map((sec) => ({ ...sec, items: all.filter((p) => p.data.section === sec.id) }))
+  .filter((g) => g.items.length > 0);
+
+// Where the link next to the intro line goes
+const targets: Record<string, string> = { projects: '#projects', 'in-progress': '#in-progress', work: '#work', contact: '#contact' };
+const pointerHref = site.pointer_target === 'resume' && site.resume ? url(site.resume) : (targets[site.pointer_target] ?? '#projects');
 ---
 
 <Base>
@@ -19,7 +26,7 @@ const proudest = all.filter((p) => p.data.proudest);
         {site.intro_text && <p class="lede">{site.intro_text}</p>}
         <p class="pointer">
           {site.pointer_text && <span class="underlined">{site.pointer_text}</span>}
-          <a href="#proudest">{site.pointer_link}</a>
+          <a href={pointerHref}>{site.pointer_link}</a>
         </p>
       </div>
 
@@ -37,35 +44,29 @@ const proudest = all.filter((p) => p.data.proudest);
     </div>
   </section>
 
-  <!-- All projects -->
-  <section class="section" id="projects" aria-labelledby="projects-title">
-    <div class="wrap">
-      <div class="section-head">
-        <h2 id="projects-title">{site.projects_heading}</h2>
-        {site.projects_description && <p>{site.projects_description}</p>}
+  <!-- Project sections: Projects, Projects in Progress, Projects at Work -->
+  {groups.map((g) => (
+    <section class={`section section-${g.id}`} id={g.id} aria-labelledby={`${g.id}-title`}>
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id={`${g.id}-title`}>{g.heading}</h2>
+          {g.description && <p>{g.description}</p>}
+        </div>
+        <div class="grid">
+          {g.items.map((p) => (
+            <ProjectCard
+              id={p.id}
+              title={p.data.title}
+              category={p.data.category}
+              image={p.data.image}
+              imageAlt={p.data.imageAlt}
+              variant={g.id}
+            />
+          ))}
+        </div>
       </div>
-      <div class="grid">
-        {projects.map((p) => (
-          <ProjectCard id={p.id} title={p.data.title} category={p.data.category} image={p.data.image} imageAlt={p.data.imageAlt} />
-        ))}
-      </div>
-    </div>
-  </section>
-
-  <!-- Proudest projects -->
-  <section class="section proudest" id="proudest" aria-labelledby="proudest-title">
-    <div class="wrap">
-      <div class="section-head">
-        <h2 id="proudest-title">{site.proudest_heading}</h2>
-        {site.proudest_description && <p>{site.proudest_description}</p>}
-      </div>
-      <div class="grid">
-        {proudest.map((p) => (
-          <ProjectCard id={p.id} title={p.data.title} category={p.data.category} image={p.data.image} imageAlt={p.data.imageAlt} featured />
-        ))}
-      </div>
-    </div>
-  </section>
+    </section>
+  ))}
 </Base>
 
 <style>
@@ -226,17 +227,24 @@ const proudest = all.filter((p) => p.data.proudest);
   .grid > :global(.card) {
     margin-bottom: clamp(1.25rem, 3vw, 2.25rem);
   }
-  .proudest {
+  /* In progress: a quiet band set apart from finished work */
+  .section-in-progress {
+    background: var(--surface);
+    border-top: 1px solid var(--line);
+  }
+
+  /* At work: purple glow and gold accents */
+  .section-work {
     position: relative;
     background:
       radial-gradient(ellipse 60% 55% at 50% 0%, color-mix(in srgb, var(--purple-glow) 85%, transparent), transparent 70%),
       linear-gradient(var(--black), color-mix(in srgb, var(--purple-glow) 25%, var(--black)));
     border-top: 1px solid var(--gold-deep);
   }
-  .proudest .section-head h2 {
+  .section-work .section-head h2 {
     color: var(--gold);
   }
-  .proudest .section-head {
+  .section-work .section-head {
     border-bottom-color: color-mix(in srgb, var(--gold-deep) 50%, transparent);
   }
 

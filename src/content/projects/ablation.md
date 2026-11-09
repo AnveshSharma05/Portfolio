@@ -1,7 +1,7 @@
 ---
 title: AtriCure Co-op
 category: Medical devices
-proudest: true
+section: work
 order: 3
 image: /images/projects/updating.png
 imageAlt: Will add information once I learn how much I can share

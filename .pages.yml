@@ -23,7 +23,7 @@ content:
       template: "{primary}.md"
       field: create
     view:
-      fields: [title, category, proudest, order]
+      fields: [title, section, category, order]
       primary: title
       sort: [order, title]
       default:
@@ -39,10 +39,18 @@ content:
         label: Category
         type: string
         description: A word or two, e.g. Hardware, Design, Research, Machine learning.
-      - name: proudest
-        label: Proudest project
-        type: boolean
-        description: Turn on to show this project in "Proudest projects" at the bottom of the home page.
+      - name: section
+        label: Section
+        type: select
+        description: Which part of the home page this project appears in.
+        options:
+          values:
+            - name: projects
+              label: Projects
+            - name: in-progress
+              label: Projects in Progress
+            - name: work
+              label: Projects at Work
       - name: order
         label: Order
         type: number
@@ -104,11 +112,26 @@ content:
         label: Intro text
         type: text
       - name: pointer_text
-        label: Line pointing to proudest projects
+        label: Underlined line under the intro
         type: string
       - name: pointer_link
-        label: Link text to jump to proudest projects
+        label: Link text next to that line
         type: string
+      - name: pointer_target
+        label: Where that link goes
+        type: select
+        options:
+          values:
+            - name: resume
+              label: Your resume
+            - name: projects
+              label: Projects section
+            - name: in-progress
+              label: Projects in Progress section
+            - name: work
+              label: Projects at Work section
+            - name: contact
+              label: Contact section
       - name: photo
         label: Your photo
         type: image
@@ -126,11 +149,17 @@ content:
       - name: projects_description
         label: Projects description
         type: text
-      - name: proudest_heading
-        label: Proudest projects heading
+      - name: in_progress_heading
+        label: Projects in Progress heading
         type: string
-      - name: proudest_description
-        label: Proudest projects description
+      - name: in_progress_description
+        label: Projects in Progress description
+        type: text
+      - name: work_heading
+        label: Projects at Work heading
+        type: string
+      - name: work_description
+        label: Projects at Work description
         type: text
       - name: contact_heading
         label: Contact heading

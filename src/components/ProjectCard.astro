@@ -6,12 +6,12 @@ interface Props {
   category: string;
   image: string;
   imageAlt?: string;
-  featured?: boolean;
+  variant?: 'projects' | 'in-progress' | 'work';
 }
-const { id, title, category, image, imageAlt = '', featured = false } = Astro.props;
+const { id, title, category, image, imageAlt = '', variant = 'projects' } = Astro.props;
 ---
 
-<a class:list={['card', { featured }]} href={url(`/projects/${id}/`)}>
+<a class:list={['card', `card-${variant}`]} href={url(`/projects/${id}/`)}>
   <span class="head">
     <span class="title">{title}</span>
     <span class="cat">{category}</span>
@@ -75,15 +75,21 @@ const { id, title, category, image, imageAlt = '', featured = false } = Astro.pr
     border-color: var(--purple);
   }
 
-  /* Proudest projects get a gold frame */
-  .featured .frame {
+  /* In progress: dashed frame, like construction lines on a drawing */
+  .card-in-progress .frame {
+    border-style: dashed;
+    border-color: color-mix(in srgb, var(--gold-deep) 70%, transparent);
+  }
+
+  /* At work: solid gold frame */
+  .card-work .frame {
     border-color: var(--gold-deep);
     box-shadow: 0 0 0 4px var(--black), 0 0 0 5px color-mix(in srgb, var(--gold-deep) 45%, transparent);
   }
-  .featured .title {
+  .card-work .title {
     color: var(--gold);
   }
-  .featured:hover .frame {
+  .card-work:hover .frame {
     border-color: var(--gold);
   }
 </style>

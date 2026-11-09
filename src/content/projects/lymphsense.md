@@ -1,7 +1,7 @@
 ---
 title: LymphSense
 category: Design
-proudest: false
+section: projects
 order: 1
 image: /images/projects/image44-1.jpg
 imageAlt: "LymphSense device on our created phantom model. "

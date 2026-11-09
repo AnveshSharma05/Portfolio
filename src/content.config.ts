@@ -20,7 +20,11 @@ const projects = defineCollection({
     summary: text(''),
     image: text('/images/projects/untitled-project.svg'),
     imageAlt: text(''),
-    proudest: z.boolean().nullish().transform((v) => v ?? false),
+    // Which home page section: projects, in-progress or work (anything else counts as projects)
+    section: z
+      .string()
+      .nullish()
+      .transform((v) => (v === 'in-progress' || v === 'work' ? v : 'projects')),
     order: z.coerce.number().nullish().transform((v) => (typeof v === 'number' && !Number.isNaN(v) ? v : 100)),
     role: optionalText,
     team: optionalText,

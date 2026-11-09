@@ -1,7 +1,7 @@
 ---
 title: "Research: Material Robotics Lab"
 category: Sensor Design
-proudest: true
+section: work
 order: 4
 image: /images/projects/updating-1.png
 imageAlt: Will update project soon!

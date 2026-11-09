@@ -11,7 +11,7 @@
   --surface: color-mix(in srgb, var(--black) 95%, white);             /* slightly raised areas */
   --line: color-mix(in srgb, var(--black) 80%, #b8a8d8);              /* thin borders and graph-paper grid */
   --gold-deep: color-mix(in srgb, var(--gold) 75%, black);            /* darker gold for borders */
-  --purple-glow: color-mix(in srgb, var(--purple) 42%, var(--black)); /* glow behind Proudest projects */
+  --purple-glow: color-mix(in srgb, var(--purple) 42%, var(--black)); /* glow behind Projects at Work */
   --text: #eee8da;           /* main text (warm off-white) */
   --muted: #a39daf;          /* secondary text */
 

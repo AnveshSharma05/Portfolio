@@ -1,7 +1,7 @@
 ---
 title: Glucose Sensor BE511
 category: Click to see current progress
-proudest: false
+section: in-progress
 order: 4
 image: /images/projects/inprogress.jpg
 imageAlt: Currently Designing the Sensor

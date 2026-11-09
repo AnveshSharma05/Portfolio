@@ -36,7 +36,7 @@ The editor is set up by `.pages.yml` in this repository.
    summary: One sentence about what it is and why it matters.
    image: /images/projects/heart-valve.jpg
    imageAlt: Describe the image for screen readers
-   proudest: false   # true puts it in "Proudest projects" at the bottom
+   section: projects # projects, in-progress or work
    order: 7          # lower numbers show first
    role: Lead designer
    team: 4 students

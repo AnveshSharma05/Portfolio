@@ -1,7 +1,7 @@
 ---
 title: Yubikey Case
 category: Hardware Design
-proudest: false
+section: projects
 order: 4
 image: /images/projects/yubikey-screenshot.png
 imageAlt: Yubikey Cover

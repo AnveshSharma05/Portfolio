@@ -1,7 +1,7 @@
 ---
 title: Rocket Nozzle Design and Simulation
 category: Design and Simulation
-proudest: false
+section: projects
 order: 5
 image: /images/projects/rocketnozzle.png
 imageAlt: "The CAD model for the rocket nozzle we designed. "

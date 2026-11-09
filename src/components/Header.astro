@@ -1,9 +1,12 @@
 ---
 import { url } from '../lib/url';
+import { getCollection } from 'astro:content';
 import { site } from '../lib/site';
+const used = new Set((await getCollection('projects')).map((p) => p.data.section));
 const links = [
-  { href: '/#projects', label: 'Projects' },
-  { href: '/#proudest', label: 'Proudest' },
+  ...(used.has('projects') ? [{ href: '/#projects', label: 'Projects' }] : []),
+  ...(used.has('in-progress') ? [{ href: '/#in-progress', label: 'In progress' }] : []),
+  ...(used.has('work') ? [{ href: '/#work', label: 'Work' }] : []),
   ...(site.resume ? [{ href: site.resume, label: 'Resume' }] : []),
   { href: '/#contact', label: 'Contact' },
 ];
@@ -61,23 +64,32 @@ const links = [
   nav a {
     white-space: nowrap;
   }
-  @media (max-width: 560px) {
+  /* Small screens: name on top, menu on its own row underneath */
+  @media (max-width: 640px) {
+    .bar {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.35rem;
+      padding-block: 0.6rem;
+      min-height: 0;
+    }
     .mark {
-      font-size: 1rem;
+      font-size: 1.05rem;
+    }
+    nav {
+      width: 100%;
+    }
+    ul {
+      justify-content: space-between;
+      gap: 0.5rem;
     }
     nav a {
-      font-size: 0.8rem;
-    }
-    ul {
-      gap: 0.7rem;
+      font-size: 0.85rem;
     }
   }
-  @media (max-width: 380px) {
-    .mark {
-      font-size: 0.9rem;
-    }
-    ul {
-      gap: 0.55rem;
+  @media (max-width: 360px) {
+    nav a {
+      font-size: 0.78rem;
     }
   }
 </style>
