@@ -2,33 +2,20 @@
 title: Glucose Sensor BE511
 category: Design
 proudest: false
-order: 3
-image: /images/projects/design-project-b.svg
-imageAlt: Placeholder image for Design project B
-summary: One sentence that explains what this project is and why it matters.
-role: Your role, e.g. Lead mechanical designer
-team: Team size or teammates
-timeline: Fall 2026
-tools: SolidWorks, MATLAB, 3D printing
+order: 4
+image: /images/projects/inprogress.jpg
+imageAlt: Currently Designing the Sensor
+summary: "We are designing a glucose sensor. "
+role: Student Engineer
+team: Team of 4
+timeline: Current
+tools: Matlab, Circuit Design
 ---
 ## Overview
 
-Placeholder text. Describe the project in two or three sentences: what you built, who it was for and what it does.
+We are designing a glucose sensor. This is a practical application of the skills we have learnt in class. It will be a place where we can explore load lines/ power curves to make sure we are not damaging components. We are building second order filters like Chebyshev to read signal and utilizing data acquisition methods we have learnt in class (while being wary of problems like aliasing).
 
-## The problem
+Currently we have just ordered parts. We are basing our design off of this project: 
 
-What need or question started this project? Who has the problem, and why do the existing solutions fall short?
+[https://www.instructables.com/DIY-Glucose-Monitor/](https://www.instructables.com/DIY-Glucose-Monitor/)
 
-## My approach
-
-Walk through how you tackled it: the design requirements, the concepts you considered, and the one you chose and why. This is a good place for CAD renders or sketches.
-
-![Placeholder for a process image](/images/projects/design-project-b.svg)
-
-## Results
-
-What did testing show? Add numbers where you can, such as accuracy, cost, weight or time saved.
-
-## What I learned
-
-One or two honest takeaways about the engineering or about working on a team.
