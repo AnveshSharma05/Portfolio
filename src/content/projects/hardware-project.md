@@ -2,7 +2,7 @@
 title: Yubikey Case
 category: Hardware Design
 proudest: false
-order: 1
+order: 4
 image: /images/projects/yubikey-screenshot.png
 imageAlt: Yubikey Cover
 summary: "A fix to prevent the hardware security key, Yubikey, from snapping and
