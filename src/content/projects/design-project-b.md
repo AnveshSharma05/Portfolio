@@ -1,17 +1,16 @@
 ---
-title: Design project B
+title: Glucose Sensor BE511
 category: Design
-summary: One sentence that explains what this project is and why it matters.
-image: /images/projects/design-project-b.svg
-imageAlt: Placeholder image for Design project B
 proudest: false
 order: 3
+image: /images/projects/design-project-b.svg
+imageAlt: Placeholder image for Design project B
+summary: One sentence that explains what this project is and why it matters.
 role: Your role, e.g. Lead mechanical designer
 team: Team size or teammates
 timeline: Fall 2026
 tools: SolidWorks, MATLAB, 3D printing
 ---
-
 ## Overview
 
 Placeholder text. Describe the project in two or three sentences: what you built, who it was for and what it does.
