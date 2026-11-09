@@ -5,7 +5,7 @@ proudest: false
 order: 4
 image: /images/projects/inprogress.jpg
 imageAlt: Currently Designing the Sensor
-summary: "We are designing a glucose sensor. "
+summary: "A really cool project where we get to design a glucose sensor. "
 role: Student Engineer
 team: Team of 4
 timeline: Current
