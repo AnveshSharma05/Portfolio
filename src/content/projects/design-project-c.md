@@ -1,7 +1,7 @@
 ---
 title: "Senior Design: Drone For Aquatic Plant Monitoring"
 category: Click to see current progress
-proudest: true
+proudest: false
 order: 4
 image: /images/projects/inprogress-1.jpg
 imageAlt: Working on the project this year!
