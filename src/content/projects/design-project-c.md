@@ -1,6 +1,6 @@
 ---
 title: "Senior Design: Drone For Aquatic Plant Monitoring"
-category: Robotics, Electrical, Hardware
+category: Click to see current progress
 proudest: true
 order: 4
 image: /images/projects/inprogress-1.jpg
