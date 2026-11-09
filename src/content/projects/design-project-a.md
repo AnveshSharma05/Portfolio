@@ -2,7 +2,7 @@
 title: Rocket Nozzle Design and Simulation
 category: Design and Simulation
 proudest: false
-order: 2
+order: 5
 image: /images/projects/rocketnozzle.png
 imageAlt: "The CAD model for the rocket nozzle we designed. "
 summary: "A designed and simulated rocket nozzle. "
@@ -40,7 +40,6 @@ A few weeks later, we presented our calculated values in a CoDR to make sure tha
 We then designed the ideal bell nozzle in Solidworks. 
 
 One challenge we faced was determining how much material should remain on the outside of the rocket nozzle. Theoretically, the shape of the nozzle shown below did not have to be cone shaped. The outer shape of the nozzle could look like a cylinder as long as the inside values like throat and exit diameter were the same as calculated.   
-
 
 We decided that it would be fun to cut down on the outer thickness and test if the nozzle was still safe to use. Some our results are shown below. They show that the nozzle would survive our applied pressures. 
 
