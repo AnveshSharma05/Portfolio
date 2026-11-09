@@ -1,35 +1,25 @@
 ---
-title: Face recognition lock box
-category: Machine learning
-summary: One sentence that explains what this project is and why it matters.
-image: /images/projects/face-recognition-lock-box.svg
-imageAlt: Placeholder image for Face recognition lock box
+title: Face Recognition Lock Box
+category: Prototyping
 proudest: true
 order: 2
-role: Your role, e.g. Lead mechanical designer
-team: Team size or teammates
-timeline: Fall 2026
-tools: SolidWorks, MATLAB, 3D printing
+image: /images/projects/facerecognitionlockbox.webp
+imageAlt: "Face recognition box we built using laser cut wood and acrylic. "
+summary: A face recognition lock box that will stay locked until activated by the user.
+role: Student Engineer
+team: Team of 2
+timeline: "2023"
+tools: Fusion 360, 3d Printing, Raspberry Pi
 ---
+![image.png](/images/projects/image-33.png)
+
+
 
 ## Overview
 
-Placeholder text. Describe the project in two or three sentences: what you built, who it was for and what it does.
+For a project in class we built a lock box from scratch. The idea was a storage space similar to a locker but one that would open up only when it detected the specific face it was trained on. 
 
-## The problem
+Please read more about the project and how we built it through this link: 
 
-What need or question started this project? Who has the problem, and why do the existing solutions fall short?
+[https://www.instructables.com/Face-Recognition-Lock-Box/](https://www.instructables.com/Face-Recognition-Lock-Box/)
 
-## My approach
-
-Walk through how you tackled it: the design requirements, the concepts you considered, and the one you chose and why. This is a good place for CAD renders or sketches.
-
-![Placeholder for a process image](/images/projects/face-recognition-lock-box.svg)
-
-## Results
-
-What did testing show? Add numbers where you can, such as accuracy, cost, weight or time saved.
-
-## What I learned
-
-One or two honest takeaways about the engineering or about working on a team.
