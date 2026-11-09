@@ -1,35 +1,17 @@
 ---
-title: Ablation
-category: Medical device
-summary: One sentence that explains what this project is and why it matters.
-image: /images/projects/ablation.svg
-imageAlt: Placeholder image for Ablation
+title: AtriCure Co-op
+category: Medical devices
 proudest: true
 order: 3
-role: Your role, e.g. Lead mechanical designer
-team: Team size or teammates
-timeline: Fall 2026
-tools: SolidWorks, MATLAB, 3D printing
+image: /images/projects/updating.png
+imageAlt: Will add information once I learn how much I can share
+summary: "I worked with the research and development team at AtriCure to help
+  build and validate surgical cardiac devices. "
+role: Intern
+team: Team of >10
+timeline: Jan - Aug 2026
+tools: SolidWorks, Milling, Instron, SLA Printing, Minitab
 ---
-
 ## Overview
 
-Placeholder text. Describe the project in two or three sentences: what you built, who it was for and what it does.
-
-## The problem
-
-What need or question started this project? Who has the problem, and why do the existing solutions fall short?
-
-## My approach
-
-Walk through how you tackled it: the design requirements, the concepts you considered, and the one you chose and why. This is a good place for CAD renders or sketches.
-
-![Placeholder for a process image](/images/projects/ablation.svg)
-
-## Results
-
-What did testing show? Add numbers where you can, such as accuracy, cost, weight or time saved.
-
-## What I learned
-
-One or two honest takeaways about the engineering or about working on a team.
+I have built this portfolio recently and am still adding more information about my experiences. I would love to share what I did during my co-op and will talk about it once I know how much I can share. 
