@@ -1,7 +1,6 @@
 ---
 title: Yubikey Case
 category: Hardware Design
-section: projects
 order: 4
 image: /images/projects/yubikey-screenshot.png
 imageAlt: Yubikey Cover
@@ -24,13 +23,11 @@ My first iteration was unable to lock together. The case around the Yubikey had 
 
 Second iteration, gap was created and everything fit together. 
 
-![Placeholder for a process image](/images/projects/hardware-project.svg)
-
 ## Results
 
 The case lasted for over 2 years before breaking. The failure was at the cantilever with a clean shear of the beam at its base. Image in the thumbnail is actually two different iterations attached together. Though this project started a few years ago before college when I had less documentation and less engineering skill, I had over the summer started redesigning the case to better withstand more deflection cycles.
 
-Some of the things I tested were print orientation (tradeoff btwn print strength and reduced supports - result was when printed in the weaker print orientation the beam broke in only a few cycles), different plastics, and redesigns to include more mass at the base of deflection.  
+Some of the things I tested were print orientation (tradeoff between print strength and reduced supports - result was when printed in the weaker print orientation the beam broke in only a few cycles), different plastics, and redesigns to include more mass at the base of deflection.  
 
 ## What I learned
 
