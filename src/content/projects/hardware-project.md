@@ -13,7 +13,7 @@ tools: SolidWorks, Fusion 360, 3D Printing
 ---
 ## Overview
 
-I built a Yubikey case. The Yubikey is a physical security key that plugs into office computers. Some computers don’t have spare usb-c ports so the Yubikey is attached to a ubs-c to usb adapter. This setup works fine for the most part. However, my dad noticed that this new configuration means that they snap really easily. He figured a case that could keep all the parts together and keep it from breaking would be really convenient. The Yubikey case is an external frame which prevents snapping of the usb-c point attached to the adaptor which is the common point of failure. 
+I built a Yubikey case. The Yubikey is a physical security key that plugs into office computers. Some computers don’t have spare usb-c ports so the Yubikey is attached to a ubs-c to usb adapter. This setup works fine for the most part. However, my dad noticed that this new configuration means that they snap really easily. He figured a case that could keep all the parts together and keep it from breaking would be really convenient. So I tried to build one for him. The Yubikey case is an external frame which prevents snapping of the usb-c point attached to the adaptor which is the common point of failure. 
 
 ## My approach
 
